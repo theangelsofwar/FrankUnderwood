@@ -20,13 +20,12 @@ This will install the most recent stable version
 npm install:
 - react-native
 - react-native-cli
-- react-csv-parse
-
 
 - node
 - watchman
-- axios
 
+- react-csv-parse
+- axios
 
 
 Folder Structure:
@@ -45,5 +44,12 @@ Why react-native-cli over Expo-cli:
 - smaller bundle size
 - able to alter native modules
 
+Data:
+- Data is read from csv file uploaded daily for prices, inventory stock
+- data.csv
+- specials.csv : contains items out of stock or discounted
 
+Design:
 
+- since the data is updated frequenty like prices/zipcode, we value consistency and atomicity, so we are going to use SQl over noSQL,
+- postgreSQL
