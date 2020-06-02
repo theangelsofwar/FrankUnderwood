@@ -25,6 +25,7 @@ npm install:
 - watchman
 
 - react-csv-parse
+- csvtojson
 - axios
 
 
