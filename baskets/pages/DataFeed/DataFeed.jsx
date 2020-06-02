@@ -1,6 +1,6 @@
 import React from 'react';
 import { Dimensions, RefreshControl } from 'react-native';
-import api from '../../services/api';
+import api from '../../../services/api';
 
 
 import {
