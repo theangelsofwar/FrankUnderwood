@@ -3,6 +3,11 @@ import { Dimensions, RefreshControl } from 'react-native';
 import api from '../../../services/api';
 
 
+import CsvParse from '@vtex/react-csv-parse';
+
+
+
+
 import {
   TouchableOpacity, 
   Image,
@@ -54,10 +59,29 @@ export default class Feed extends Component {
   }
 
 
+  handleData = data => {
+    this.setState({data});
+  }
+
+
   loadRequest = async () => {
     const response = await api.get('inventoryrange');
     //fetches inventory that are within the range of the zip code, extended gps location
     
+  }
+
+
+  render() {
+    const keys = ["Item1", "Item2", "Item3"];
+
+    return (
+      <CsvParse 
+        keys={keys}
+        onDataUpload={this.handleData}
+        onError={this.handleError}
+        render={onChange => <input type="file" onChange={onChange} /> }
+      />
+    )
   }
 }
 

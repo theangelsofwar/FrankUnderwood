@@ -53,4 +53,8 @@ Data:
 Design:
 
 - since the data is updated frequenty like prices/zipcode, we value consistency and atomicity, so we are going to use SQl over noSQL,
-- postgreSQL
+- postgreSQL is how we stored data and make updated on a fetch using axios and creating relevant api, 
+- updated csv files will update server and props passed to client and the availability of the items based on the zipcode entered by the user
+
+- on a purchase by the client, database is updated
+- we can cache a client's current basket stock before they hit the pay button, and later add analytics
