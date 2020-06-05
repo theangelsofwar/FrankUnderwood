@@ -58,3 +58,25 @@ Design:
 
 - on a purchase by the client, database is updated
 - we can cache a client's current basket stock before they hit the pay button, and later add analytics
+
+
+
+Querying:
+
+getAll
+
+query {
+  items {
+    id
+    name
+  }
+}
+
+getById
+
+query{
+  item(id: "1") {
+    id
+    text
+  }
+}

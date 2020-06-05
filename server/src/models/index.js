@@ -1,11 +1,11 @@
 let items = {
   1: {
     id: '1',
-    text: 'Hello World'
+    name: 'Hello World',
   },
   2: {
     id: '2',
-    text: 'Bye World',
+    name: 'Bye World',
   },
 };
 

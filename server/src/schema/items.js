@@ -6,6 +6,12 @@ export default gql`
     item(id: ID!) : Item! 
   }
 
+  extend type Mutation {
+    createNewItem(text: String!): Item!
+    deleteItem(id: ID!): Booelean!
+    updateItem(id: ID!, text: String!): Item!
+  }
+
   type Item {
     id: ID!
     name: String!
